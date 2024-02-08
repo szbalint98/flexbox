@@ -1,0 +1,34 @@
+*{
+    box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
+    gap: 10px;
+}
+article,div{
+    border: 2px solid blueviolet;
+    padding: 10px;
+}
+div{
+    background-color: aqua;
+}
+article{
+    display: flex;
+    flex-wrap: wrap;
+}
+div{
+    flex:0 0 calc(25% - 10px);
+}
+div:nth-child(2){
+    order: -1;
+}
+div:nth-child(5){
+    order: -1;
+}
+@media screen and (max-width:500px) {
+    article{
+        flex-direction: column;
+    }
+    div{
+        flex: 0 0 100%;
+    }
+}
